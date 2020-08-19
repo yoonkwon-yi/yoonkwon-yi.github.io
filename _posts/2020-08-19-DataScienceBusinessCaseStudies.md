@@ -37,7 +37,8 @@ Here's a numbered list:
 
 
 Python code block:
-'''py
+
+'''python
 import numpy as np
 def test_function(x,y):
   z= np.sum(x,y)
