@@ -17,13 +17,11 @@ Data Source: [here](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrit
 ## Visualization
 
 ```python
-
 #read csv
 employee_df = pd.read_csv('Human_Resources.csv')
 
 #historgram of every features
 employee_df.hist(bins = 30, figsize = (20,20), color = '#0077b6')
-
 ```
 
 * Several features such as 'MonthlyIncome' and 'TotalWorkingYears' are skewed to the right.
@@ -35,8 +33,6 @@ employee_df.hist(bins = 30, figsize = (20,20), color = '#0077b6')
 
 ```python
 employee_df.drop(['EmployeeCount', 'StandardHours', 'Over18', 'EmployeeNumber'], axis=1, inplace=True)
-
-
 ```
 <!--
 Here's some basic text.
