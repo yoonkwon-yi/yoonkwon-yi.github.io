@@ -96,8 +96,8 @@ author:
   name             : "Yoonkwon Yi"
   avatar           : "/images/DominicYiPortrait.jpg"
   bio              : "Data Science Portfolio"
-  location         : "Minneapolis"
-  email            :
+  location         : "Minneapolis, MN"
+  email            : "yoonkwon.yi@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
