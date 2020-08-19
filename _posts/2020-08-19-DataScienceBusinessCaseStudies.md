@@ -26,6 +26,8 @@ employee_df.hist(bins = 30, figsize = (20,20), color = '#0077b6')
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/AllFeaturesGraphed.png" alt="histogram of all features">
 
+[Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project01-HR/AllFeaturesGraphed.png)
+
 * Several features such as 'MonthlyIncome' and 'TotalWorkingYears' are skewed to the right.
 
 * By looking at the graph we can see that we can drop features such as 'EmployeeCount','Standardhours','Over18', and'EmployeeNumber'
@@ -36,6 +38,11 @@ employee_df.drop(['EmployeeCount', 'StandardHours', 'Over18', 'EmployeeNumber'],
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/correlations.png" alt="heatmap of correlations of all features">
+
+[Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project01-HR/correlations.png)
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/AgeAttrition.png" alt="Count plot of age and attrition">
 
 
 
@@ -49,6 +56,24 @@ sns.set(font_scale=2)
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/JobeRoleVSIncome.png" alt="JobRole VS Monthyl Income box plots">
 
+
+## Train & Evaluate Artificial Neural Network
+```python
+import tensorflow as tf
+
+model = tf.keras.models.Sequential()
+model.add(tf.keras.layers.Dense(units=500, activation='relu', input_shape=(50, )))
+model.add(tf.keras.layers.Dense(units=500, activation='relu'))
+model.add(tf.keras.layers.Dense(units=500, activation='relu'))
+model.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+
+model.compile(optimizer='Adam', loss='binary_crossentropy', metrics = ['accuracy'])
+
+epochs_hist = model.fit(X_train, y_train, epochs = 100, batch_size = 50)
+
+y_pred = model.predict(X_test)
+y_pred = (y_pred > 0.5)
+```
 
 
 
