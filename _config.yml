@@ -98,7 +98,6 @@ author:
   bio              : "Data Science Portfolio"
   location         : "Minneapolis, MN"
   email            : "yoonkwon.yi@gmail.com"
-  GitHub           : "GitHub"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
