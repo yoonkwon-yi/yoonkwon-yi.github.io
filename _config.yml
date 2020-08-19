@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Yoonkwon Yi"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/DominicYiPortrait.jpg"
   bio              : "Data Science Portfolio"
   location         : "Minneapolis"
   email            :
