@@ -3,7 +3,7 @@ title: "Machine Learning Project: Business Case Studies"
 date: 2020-08-19
 tags: [machine learning, data science, neural network]
 header:
-  image: "images/DominicYiPortrait.jpg"
+  image: "images/StoneArchBridge.jpg"
 excerpt: "Machine Learning, Data Science"
 mathjax: true
 ---
