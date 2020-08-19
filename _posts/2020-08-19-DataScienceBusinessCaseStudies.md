@@ -9,7 +9,7 @@ mathjax: true
 ---
 
 
-# Question: Predict Which Employees Will Leave
+# Question: Who will most likely to leave the company?
 
 Data Source: [here](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 
@@ -24,16 +24,34 @@ employee_df = pd.read_csv('Human_Resources.csv')
 employee_df.hist(bins = 30, figsize = (20,20), color = '#0077b6')
 ```
 
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/AllFeaturesGraphed.png" alt="histogram of all features">
+
 * Several features such as 'MonthlyIncome' and 'TotalWorkingYears' are skewed to the right.
 
 * By looking at the graph we can see that we can drop features such as 'EmployeeCount','Standardhours','Over18', and'EmployeeNumber'
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/AllFeaturesGraphed.png" alt="histogram of all features">
-
-
 ```python
 employee_df.drop(['EmployeeCount', 'StandardHours', 'Over18', 'EmployeeNumber'], axis=1, inplace=True)
 ```
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/correlations.png" alt="heatmap of correlations of all features">
+
+
+
+```python
+plt.figure(figsize=(15, 10))
+plt.xticks(fontsize=16)
+plt.yticks(fontsize=16)
+sns.boxplot(x = 'MonthlyIncome', y = 'JobRole', data = employee_df, palette='pastel')
+sns.set(font_scale=2)
+```
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/JobeRoleVSIncome.png" alt="JobRole VS Monthyl Income box plots">
+
+
+
+
 <!--
 Here's some basic text.
 
@@ -54,7 +72,7 @@ Here's a numbered list:
 2. Second
 3. Third -->
 
-
+<!--
 Python code block:
 
 ```python
@@ -63,7 +81,7 @@ import numpy as np
 def test_function(x,y):
   z= np.sum(x,y)
   return z
-```
+``` -->
 
 <!--
 Here's some inline code 'x+y'
