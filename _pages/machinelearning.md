@@ -6,7 +6,7 @@ author_profile: true
 header:
   image: "/image/DominicYiPortrait.jpg"
 ---
-{% include base_path %}
+
 {% include group-by-array collection=site.posts field="tags" %}
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
