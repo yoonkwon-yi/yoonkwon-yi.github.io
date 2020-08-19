@@ -38,25 +38,14 @@ Here's a numbered list:
 
 Python code block:
 
-'''python
+```python
+import numpy as np
 
-    import numpy as np
+def test_function(x,y):
+  z= np.sum(x,y)
+  return z
+```
 
-    def test_function(x,y):
-      z= np.sum(x,y)
-      return z
-
-'''
-
-
-
-
-R code block:
-'''r
-    library(tidyverse)
-    df <- read_csv("some_file.csv")
-    head(df)
-'''
 
 Here's some inline code 'x+y'
 
