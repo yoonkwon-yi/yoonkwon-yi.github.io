@@ -12,7 +12,7 @@ mathjax: true
 
 ## 1. Formulate Questions
 
-### What factors lead to 1. employees performing well or 2. leaving the company?
+### What factors lead to attrition of an employee? Can we predict who is likely to leave?
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/HRPic.jpg" alt="HR Stock Picture">
 
