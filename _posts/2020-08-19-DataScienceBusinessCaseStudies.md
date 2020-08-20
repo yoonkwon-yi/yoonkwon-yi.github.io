@@ -1,10 +1,10 @@
 ---
-title: "Data Science Project 01: Business Case Study Human Resource"
+title: "Project 01: Predict Attrition of Employee"
 date: 2020-08-19
-tags: [data science, logistic regression classifiers, ANN, random forest classifier]
+tags: [data science, artificial neural network]
 header:
   image: "images/StoneArchBridge.jpg"
-excerpt: "Data Science, HR, Case Study"
+excerpt: "Data Science, Machine Learning, Human Resource"
 mathjax: true
 ---
 
@@ -83,7 +83,7 @@ stayed_df      = employee_df[employee_df['Attrition'] == 0]
 A pie chart illustrating the composition of left and stayed was plotted.
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/pichart.png" alt="piechart">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/piechart.png" alt="piechart">
 
 To see the correlations between the features and the target, a heatmap was created.
 
