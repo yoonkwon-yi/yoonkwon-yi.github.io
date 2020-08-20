@@ -91,10 +91,7 @@ To see the correlations between the features and the target, a heatmap was creat
 
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project01-HR/correlations.png)
 
-Some interesting points from the above heatmap includes:
-
-- Monthly income is strongly correlated (0.95) with Job Level.
-- Over time is positively correlated (0.25) with Attrition which is understandable.
+As shown in the above heatmap, monthly income is strongly correlated (0.95) with Job Level. Also, Over time is positively correlated (0.25) with Attrition which is understandable.
 
 
 Another count plot was created to see the relationship between Age and Attrition.
@@ -114,10 +111,11 @@ plt.yticks(fontsize=16)
 sns.boxplot(x = 'MonthlyIncome', y = 'JobRole', data = employee_df, palette='pastel')
 sns.set(font_scale=2)
 ```
+The output of the above code block is shown below:
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/JobeRoleVSIncome.png" alt="JobRole VS Monthyl Income box plots">
 
-- The average MonthlyIncome was the highest for Mangers and Research Directors, whereas Sales Representatives earned the lowest.
+As shown above, the average MonthlyIncome was the highest for Mangers and Research Directors, whereas Sales Representatives earned the lowest.
 
 ## 5. Train Algorithm
 
@@ -192,6 +190,19 @@ Below is a confusion matrix resulted from the ANN model built above.
 
 By using the information in the confusion matrix, precision, recall, and f1-score were calculated.
 
+
+Precision is useful when costs of false positive (predicted true but in fact not true) are too high. For example, in terms of cancer tests, if the model's precision is so low, it would diagnoses healthy people as cancer patients. This would result in lots of mental stresses for the patients and spend in lots of resources.
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/Precision.png" alt="precision">
+
+
+On the other hand, Recall is useful when false negatives' costs are too high. For example, in terms of diagnoses of a very deadly contagious virus. If the model predicts that a person with a virus is virus-free, the virus would spread too fast to contain in the future.
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/Recall.png" alt="recall">
+
+The combination of Precision and Recall score is the F1 Score.
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/F1.png" alt="F1">
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNScores.JPG" alt="ANN classification report">
