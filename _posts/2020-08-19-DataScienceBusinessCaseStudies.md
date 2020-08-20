@@ -153,12 +153,13 @@ epochs_hist = model.fit(X_train, y_train, epochs = 100, batch_size = 50)
 
 y_pred = model.predict(X_test)
 y_pred = (y_pred > 0.5)
-
 ```
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNDiagram.JPG" alt="ANN architecture">
 
 <br />
-The above neural network architecture is a simplified version of the real model used in this project. The only correct layer would be the output as it indeed has only one node. However, the number of layers are correctly illustrated as the model has 5 layers (1 input, 3 hidden, and 1 output layers). The number of nodes of the input layer should be 50 and the hidden layers should have 500 each.
+The below neural network architecture is a simplified version of the real model used in this project. The only correct layer would be the output as it indeed has only one node. Also, the number of layers are correctly illustrated as the model has 5 layers (1 input, 3 hidden, and 1 output layers). The number of nodes of the input layer should be 50 and the hidden layers should have 500 each.
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNDiagram.JPG" alt="ANN architecture">
+
 
 Since there are 50 columns in X_train (after OneHotEncoding and feature scaling), the input_shape will have 50 nodes indicated by the "input_shape" parameter.
 
@@ -175,16 +176,23 @@ In regards to the optimizer, "Adam" was used as it achieve results more efficien
 <br />
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNLoss.png" alt="Model Loss Progress During Training">
-- Note how around Epoch number 25, Training Loss seem to plateau out reaching the minimum, indicating completion of neural network training.
-- Even though we continue to train the model after Epoch number 25 up to 100, the graph indicates there are no overfitting.
+
+Note how around Epoch number 25, Training Loss seem to plateau out reaching the minimum, indicating completion of neural network training. Also, even though we continue to train the model after Epoch number 25 up to 100, the graph indicates there are no overfitting.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNAccuracy.png" alt="Model Accuracy Progress During Training">
-- Similarly, the above graph of Model Accuracy reinforces that after Epoch number 25, the training of the model is complete.
+
+Similarly, the above graph of Model Accuracy reinforces that after Epoch number 25, the training of the model is complete.
 
 
 
 ## 6. Evaluate
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNCM.png" alt="ANN Confusion Matrix">
+
+Below is a confusion matrix resulted from the ANN model built above.
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/cm.png" alt="ANN Confusion Matrix">
+
+By using the information in the confusion matrix, precision, recall, and f1-score were calculated.
+
+
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNScores.JPG" alt="ANN classification report">
 
