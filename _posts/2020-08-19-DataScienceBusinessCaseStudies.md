@@ -1,5 +1,5 @@
 ---
-title: "Project 01: Prediction of Employee Attrition Using Neural Network"
+title: "Project 01: Prediction of Employee Attrition Using Artificial Neural Network"
 date: 2020-08-19
 tags: [data science, artificial neural network]
 header:
@@ -10,9 +10,10 @@ mathjax: true
 
 
 
-## 1. Formulate Questions
+## 1. Formulate Questions & Background
 
 ### What factors lead to attrition of an employee? Can we predict who is likely to leave?
+
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/HRPic.jpg" alt="HR Stock Picture">
 
