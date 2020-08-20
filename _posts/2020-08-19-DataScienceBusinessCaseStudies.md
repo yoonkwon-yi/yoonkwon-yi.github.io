@@ -83,7 +83,7 @@ stayed_df      = employee_df[employee_df['Attrition'] == 0]
 A pie chart illustrating the composition of left and stayed was plotted.
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/piechart.png" alt="piechart" class= "center">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/piechart.png" alt="piechart" align= "middle">
 
 To see the correlations between the features and the target, a heatmap was created.
 
@@ -204,6 +204,7 @@ The combination of Precision and Recall score is the F1 Score.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/F1.png" alt="F1">
 
+As shown below, the weight average scores for the ANN model should roughly 0.85 for all precision, recall, and f1-score, indicating a fairly high performance from the model.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNScores.JPG" alt="ANN classification report">
 
