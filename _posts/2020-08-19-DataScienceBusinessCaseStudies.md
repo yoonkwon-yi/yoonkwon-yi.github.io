@@ -83,7 +83,7 @@ stayed_df      = employee_df[employee_df['Attrition'] == 0]
 A pie chart illustrating the composition of left and stayed was plotted.
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/piechart.png" alt="piechart">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/piechart.png" alt="piechart" class= "center">
 
 To see the correlations between the features and the target, a heatmap was created.
 
