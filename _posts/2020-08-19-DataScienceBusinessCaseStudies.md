@@ -155,14 +155,22 @@ y_pred = model.predict(X_test)
 y_pred = (y_pred > 0.5)
 
 ```
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNDiagram.JPG" alt="ANN architecture">
+
 <br />
-Overall, the above ANN model has 5 layers (1 input, 3 hidden, and 1 output layers).
+The above neural network architecture is a simplified version of the real model used in this project. The only correct layer would be the output as it indeed has only one node. However, the number of layers are correctly illustrated as the model has 5 layers (1 input, 3 hidden, and 1 output layers). The number of nodes of the input layer should be 50 and the hidden layers should have 500 each.
 
 Since there are 50 columns in X_train (after OneHotEncoding and feature scaling), the input_shape will have 50 nodes indicated by the "input_shape" parameter.
 
-This model has 3 hidden layers with each hidden layer having 500 nodes and rectified linear activation function. The input layer has 50 nodes and the output layer has 1 node which would output a vector that is non-negative and sums to 1 (probability that the employee would leave the company). Since the current problem is a mutually exclusive binary problem (either leave or not leave the company), we can use the "sigmoid" function.
+The hidden layer uses rectified linear activation function (ReLu). The ReLu function is shown below. It outputs x if x is positive. Otherwise, it outputs zero.
 
-Thus, if the value of y_pred is above 0.5 (50%), we say that we predict the employee will leave the company and equal or lower than 0.5 would stay.
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/relu.jpg" alt="relu diagram">
+
+ReLu is beneficial for neural network with many neurons (as our model) since it has a sparse activation leading to a "lighter" network. By having few neurons to NOT activate, we would make the activation sparse and efficient. Other activation functions such as sigmoid and tanh would fire neurons in an analog way, leading to a dense activation, which is costly. In conclusion, ReLu was chosen as it is less computationally expensive compared to sigmoid or tanh.
+
+The output layer has 1 node which would output a vector that is non-negative and sums to 1 (probability that the employee would leave the company). Since the current problem is a mutually exclusive binary problem (either leave or not leave the company), we can use the "sigmoid" function. Consequently, if the value of y_pred is above 0.5 (50%), we say that we predict the employee will leave the company and equal or lower than 0.5 would stay.
+
+In regards to the optimizer, "Adam" was used.
 <br />
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNLoss.png" alt="Model Loss Progress During Training">
