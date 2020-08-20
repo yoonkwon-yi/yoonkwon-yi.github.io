@@ -15,7 +15,7 @@ mathjax: true
 ### How can we understand the customers better to launch a targeted marketing campaign?
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/targetc.jpg" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/target.jpg" alt="target clusters">
 
 ## 2. Gather Data
 
