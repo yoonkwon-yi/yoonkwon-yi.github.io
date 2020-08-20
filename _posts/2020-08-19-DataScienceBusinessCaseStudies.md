@@ -155,10 +155,21 @@ y_pred = model.predict(X_test)
 y_pred = (y_pred > 0.5)
 
 ```
+Overall, the above ANN model has 5 layers (1 input, 3 hidden, and 1 output layers).
+
+Since there are 50 columns in X_train (after OneHotEncoding and feature scaling), the input_shape will have 50 nodes indicated by the "input_shape" parameter.
+
+This model has 3 hidden layers with each hidden layer having 500 nodes and rectified linear activation function. The input layer has 50 nodes and the output layer has 1 node which would output a vector that is non-negative and sums to 1 (probability that the employee would leave the company). Since the current problem is a mutually exclusive binary problem (either leave or not leave the company), we can use the "sigmoid" function.
+
+Thus, if the value of y_pred is above 0.5 (50%), we say that we predict the employee will leave the company and equal or lower than 0.5 would stay.
+
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNLoss.png" alt="Model Loss Progress During Training">
+- Note how around Epoch number 25, Training Loss seem to plateau out reaching the minimum, indicating completion of neural network training.
+- Even though we continue to train the model after Epoch number 25 up to 100, the graph indicates there are no overfitting.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNAccuracy.png" alt="Model Accuracy Progress During Training">
+- Similarly, the above graph of Model Accuracy reinforces that after Epoch number 25, the training of the model is complete.
 
 
 
