@@ -186,6 +186,7 @@ Similarly, the above graph of Model Accuracy reinforces that after Epoch number 
 ## 6. Evaluate
 
 Below is a confusion matrix resulted from the ANN model built above.
+<br />
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/cm.png" alt="ANN Confusion Matrix">
 
 By using the information in the confusion matrix, precision, recall, and f1-score were calculated.
