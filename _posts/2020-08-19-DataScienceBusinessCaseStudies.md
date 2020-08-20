@@ -170,7 +170,8 @@ ReLu is beneficial for neural network with many neurons (as our model) since it 
 
 The output layer has 1 node which would output a vector that is non-negative and sums to 1 (probability that the employee would leave the company). Since the current problem is a mutually exclusive binary problem (either leave or not leave the company), we can use the "sigmoid" function. Consequently, if the value of y_pred is above 0.5 (50%), we say that we predict the employee will leave the company and equal or lower than 0.5 would stay.
 
-In regards to the optimizer, "Adam" was used.
+In regards to the optimizer, "Adam" was used as it achieve results more efficiently compared to other optimizers.
+
 <br />
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNLoss.png" alt="Model Loss Progress During Training">
