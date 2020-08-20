@@ -14,7 +14,7 @@ mathjax: true
 
 ### What factors lead to 1. employees performing well or 2. leaving the company?
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/HRPic.png" alt="HR Stock Picture">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/HRPic.jpg" alt="HR Stock Picture">
 
 ## 2. Gather Data
 
@@ -45,7 +45,7 @@ To check if there are any missing data, below code was used.
 ```python
 sns.heatmap(employee_df.isnull(), yticklabels = False, cbar = False, cmap="Blues")
 ```
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/isNull.JPG" alt="check Null data">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/isNull.png" alt="check Null data">
 
 As shown above, there weren't any missing data (if there was, it would have been blue in the chart).
 
@@ -165,7 +165,7 @@ y_pred = (y_pred > 0.5)
 ## 6. Evaluate
 <img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNCM.png" alt="ANN Confusion Matrix">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNScores.png" alt="ANN classification report">
+<img src="{{site.url}}{{site.baseurl}}/images/Project01-HR/ANNScores.JPG" alt="ANN classification report">
 
 
 
