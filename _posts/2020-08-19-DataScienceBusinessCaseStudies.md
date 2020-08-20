@@ -1,5 +1,5 @@
 ---
-title: "Project 01: Prediction of Employee Attrition Using Artificial Neural Network"
+title: "Project 01: Prediction of Employee Attrition Using Deep Feed Forward Neural Network"
 date: 2020-08-19
 tags: [data science, artificial neural network]
 header:
