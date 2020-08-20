@@ -1,5 +1,5 @@
 ---
-title: "Project 01: Prediction of Employee Attrition"
+title: "Project 01: Prediction of Employee Attrition Using Neural Network"
 date: 2020-08-19
 tags: [data science, artificial neural network]
 header:
