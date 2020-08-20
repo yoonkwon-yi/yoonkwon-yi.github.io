@@ -1,10 +1,10 @@
 ---
-title: "Project 01: Prediction of Employee Attrition Using Deep Feed Forward Neural Network"
+title: "Prediction of Employee Attrition Using Deep Feed Forward Neural Network"
 date: 2020-08-19
-tags: [data science, artificial neural network]
+tags: [artificial neural network]
 header:
   image: "images/StoneArchBridge.jpg"
-excerpt: "Data Science, Machine Learning, Human Resource"
+excerpt: "Feed Forward Neural Network"
 mathjax: true
 ---
 
