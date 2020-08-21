@@ -47,6 +47,7 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="post pca scatterplot">
+[Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/06pca.png)
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="elbow after autoencoder">
@@ -55,6 +56,7 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/07pcaAutoencoder.png" alt="post pca after autoencoder">
+[Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/07pcaAutoencoder.png)
 
 
 
