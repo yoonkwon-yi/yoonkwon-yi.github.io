@@ -15,7 +15,7 @@ mathjax: true
 ### How can we understand the customers better to launch a targeted marketing campaign?
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/target.jpg" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/target.png" alt="target clusters">
 
 ## 2. Gather Data
 
@@ -28,6 +28,29 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 
 ## 4. Explore & Visualize
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" alt="target clusters">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/02NotMissing.png" alt="target clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.png" alt="target clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="target clusters">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/05ClusterHisto.png" alt="target clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="target clusters">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="target clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.7bothelbow.png" alt="target clusters">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/07pcaAutoencoder.png" alt="target clusters">
+
 
 
 ## 5. Train Algorithm
