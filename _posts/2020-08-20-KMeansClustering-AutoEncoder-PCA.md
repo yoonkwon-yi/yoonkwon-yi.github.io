@@ -23,31 +23,51 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 - "The sample Dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables."
 
-## 3. Clean Data
-
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" style="max-width:100%;" alt="check missing data">
+## 3. Explore & Visualize\
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/02NotMissing.png" alt="check missing data again">
-
-## 4. Explore & Visualize
 
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.jpg" alt="heatmap correlation">
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/03Correlation.jpg)
 
+## 4. Train Algorithm
+
+### K-means Clustering
+
+The "K" in the name "K-menas Clustering" stands for the number of clusters that categorizes the dataset. One way of determining the value "K" is using the 'Elbow Method'.
+
+The "Elbow" is graphed by iterating K-means clustering by varying K values. Then the 'distortion' of each clusters are plotted against the K values. This result in a graph similar to the one below.
+
+We pic the value K on x-axis as the optimal K when the rate of increase in the slope of the graph slows down significantly. If the graph is imagined as a bent elbow, the joint of the elbow would be the optimal K value. In our project, 5 was chosen as the K.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="finding k using elbow">
 
+### Principal Component Analysis (PCA)
+Now before visualizing the clusters, PCA must be performed on the dataset to reduce the 17th dimension data (since we have 17 features) to 2nd dimension.
 
 
+```python
+# Obtain the principal components
+pca = PCA(n_components=2)
+principal_comp = pca.fit_transform(creditcard_df_scaled)
+
+# Create a dataframe with the two components
+pca_df = pd.DataFrame(data = principal_comp, columns =['pca1','pca2'])
+
+# Concatenate the clusters labels to the dataframe
+pca_df = pd.concat([pca_df,pd.DataFrame({'cluster':labels})], axis = 1)
+```
 
 
-
+Once we perform the dimensionality reduction, we can plot it as a 2-D graph as shown below.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="post pca scatterplot">
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/06pca.png)
+
+### Auto Encoder
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/autoencoder.png" alt="auto encoder">
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="elbow after autoencoder">
@@ -60,10 +80,10 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 
 
-## 5. Train Algorithm
+## 5. Conclusion
 
 
-## 6. Evaluate
+
 
 
 
