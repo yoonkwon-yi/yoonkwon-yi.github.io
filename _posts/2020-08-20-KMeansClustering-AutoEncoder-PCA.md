@@ -35,6 +35,8 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.png" alt="heatmap correlation">
+[Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/03Correlation.png)
+
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="finding k using elbow">
 
