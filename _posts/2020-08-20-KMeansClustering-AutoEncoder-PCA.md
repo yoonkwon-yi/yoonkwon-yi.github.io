@@ -25,7 +25,7 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 ## 3. Clean Data
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" alt="check missing data">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" style="max-width:100%;" alt="check missing data">
 
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/02NotMissing.png" alt="check missing data again">
