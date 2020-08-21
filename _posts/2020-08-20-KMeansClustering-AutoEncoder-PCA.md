@@ -23,7 +23,7 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 - "The sample Dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables."
 
-## 3. Explore & Visualize\
+## 3. Explore & Visualize
 
 
 
@@ -67,8 +67,54 @@ Once we perform the dimensionality reduction, we can plot it as a 2-D graph as s
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/06pca.png)
 
 ### Auto Encoder
+
+Above, we were able to cluster the customers of the bank into 5 groups. What if we want to cluster them in a even smaller number of groups? We could use Auto Encoder to reduce the dimensionality, similar to PCA, and cluster them.
+
+Below image shows a simplified diagram of an Auto Encoder.
+
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/autoencoder.png" alt="auto encoder">
 
+It is comprised of encoder, bottleneck, and decoder. As we move from the input layer to the bottleneck, as the name implies, the dimensionality is reduced (compressed). The decoder is used for training, and what goes into the encoder should be the same when it comes out the decoder. In the end, what we get at the bottleneck is what is used (reduced dimension data).
+
+```python
+from tensorflow.keras.layers import Input, Add, Dense, Activation, ZeroPadding2D, BatchNormalization, Flatten, Conv2D, AveragePooling2D, MaxPooling2D, Dropout
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.initializers import glorot_uniform
+from keras.optimizers import SGD
+
+encoding_dim = 7
+
+input_df = Input(shape=(17,))
+
+
+# Glorot normal initializer (Xavier normal initializer) draws samples from a truncated normal distribution
+
+x = Dense(encoding_dim, activation='relu')(input_df)
+x = Dense(500, activation='relu', kernel_initializer = 'glorot_uniform')(x)
+x = Dense(500, activation='relu', kernel_initializer = 'glorot_uniform')(x)
+x = Dense(2000, activation='relu', kernel_initializer = 'glorot_uniform')(x)
+
+encoded = Dense(10, activation='relu', kernel_initializer = 'glorot_uniform')(x)
+
+x = Dense(2000, activation='relu', kernel_initializer = 'glorot_uniform')(encoded)
+x = Dense(500, activation='relu', kernel_initializer = 'glorot_uniform')(x)
+
+decoded = Dense(17, kernel_initializer = 'glorot_uniform')(x)
+
+# autoencoder
+autoencoder = Model(input_df, decoded)
+
+#encoder - used for our dimention reduction
+encoder = Model(input_df, encoded)
+
+autoencoder.compile(optimizer= 'adam', loss='mean_squared_error')
+
+autoencoder.fit(creditcard_df_scaled, creditcard_df_scaled, batch_size = 128, epochs = 25,  verbose = 1)
+
+#get the compressed data called pred 
+pred = encoder.predict(creditcard_df_scaled)
+
+```
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="elbow after autoencoder">
 
