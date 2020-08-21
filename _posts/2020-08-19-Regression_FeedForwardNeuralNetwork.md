@@ -6,6 +6,9 @@ header:
   image: "images/StoneArchBridge.jpg"
 excerpt: "Feed Forward Neural Network"
 mathjax: true
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
 [Full Code](https://github.com/yoonkwon-yi/Project01-Prediction_of_Employee_Attrition_using_Artificial_Neural_Network/blob/master/Project01-Prediction_of_Employee_Attrition_using_Artificial_Neural_Network.ipynb)
