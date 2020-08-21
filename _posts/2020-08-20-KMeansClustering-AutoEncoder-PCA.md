@@ -39,7 +39,54 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="finding k using elbow">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/05ClusterHisto.png" alt="histograms for all clusters">
+
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/1.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/2.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/3.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/4.png" alt="histograms for all clusters">
+
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/5.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/6.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/7.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/8.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/9.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/10.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/11.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/12.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/13.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/14.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/15.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/16.png" alt="histograms for all clusters">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/17.png" alt="histograms for all clusters">
+
+
+
+
+
+
+
+
+
+
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="post pca scatterplot">
 
