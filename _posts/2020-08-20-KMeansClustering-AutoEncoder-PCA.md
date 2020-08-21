@@ -25,31 +25,31 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 
 ## 3. Clean Data
 
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" alt="check missing data">
 
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/02NotMissing.png" alt="check missing data again">
 
 ## 4. Explore & Visualize
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/01Missing.png" alt="target clusters">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/02NotMissing.png" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.png" alt="heatmap correlation">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.png" alt="target clusters">
-
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="finding k using elbow">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/05ClusterHisto.png" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/05ClusterHisto.png" alt="histograms for all clusters">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="target clusters">
-
-
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="target clusters">
-
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.7bothelbow.png" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="post pca scatterplot">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/07pcaAutoencoder.png" alt="target clusters">
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="elbow after autoencoder">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.7bothelbow.png" alt="2 elbows on one graph">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/07pcaAutoencoder.png" alt="post pca after autoencoder">
 
 
 
