@@ -26,8 +26,7 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/arjunbhasin2013/cc
 ## 3. Explore & Visualize
 
 
-
-
+As shown in the below heatmap, there is a strong positive correlation between 'purchases_frequency' and 'purchases_installments_frequency' as well as 'one-off purchases' and  'purchases'
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/03Correlation.jpg" alt="heatmap correlation">
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/03Correlation.jpg)
@@ -45,7 +44,7 @@ We pic the value K on x-axis as the optimal K when the rate of increase in the s
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/04Elbow.png" alt="finding k using elbow">
 
 ### Principal Component Analysis (PCA)
-Now before visualizing the clusters, PCA must be performed on the dataset to reduce the 17th dimension data (since we have 17 features) to 2nd dimension.
+Now before visualizing the clusters, PCA must be performed on the dataset to reduce the 17th dimension data (since we have 17 columns) to 2nd dimension.
 
 
 ```python
@@ -59,8 +58,6 @@ pca_df = pd.DataFrame(data = principal_comp, columns =['pca1','pca2'])
 # Concatenate the clusters labels to the dataframe
 pca_df = pd.concat([pca_df,pd.DataFrame({'cluster':labels})], axis = 1)
 ```
-
-
 Once we perform the dimensionality reduction, we can plot it as a 2-D graph as shown below.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06pca.png" alt="post pca scatterplot">
@@ -70,26 +67,19 @@ Once we perform the dimensionality reduction, we can plot it as a 2-D graph as s
 
 Above, we were able to cluster the customers of the bank into 5 groups. What if we want to cluster them in a even smaller number of groups? We could use Auto Encoder to reduce the dimensionality, similar to PCA, and cluster them.
 
-Below image shows a simplified diagram of an Auto Encoder.
+Below image shows a simplified diagram of an Auto Encoder.  
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/autoencoder.png" alt="auto encoder">
 
 It is comprised of encoder, bottleneck, and decoder. As we move from the input layer to the bottleneck, as the name implies, the dimensionality is reduced (compressed). The decoder is used for training, and what goes into the encoder should be the same when it comes out the decoder. In the end, what we get at the bottleneck is what is used (reduced dimension data).
 
 ```python
-from tensorflow.keras.layers import Input, Add, Dense, Activation, ZeroPadding2D, BatchNormalization, Flatten, Conv2D, AveragePooling2D, MaxPooling2D, Dropout
-from tensorflow.keras.models import Model, load_model
-from tensorflow.keras.initializers import glorot_uniform
-from keras.optimizers import SGD
 
-encoding_dim = 7
-
+#initially we have 17 columns for our data
 input_df = Input(shape=(17,))
 
-
 # Glorot normal initializer (Xavier normal initializer) draws samples from a truncated normal distribution
-
-x = Dense(encoding_dim, activation='relu')(input_df)
+x = Dense(7, activation='relu')(input_df)
 x = Dense(500, activation='relu', kernel_initializer = 'glorot_uniform')(x)
 x = Dense(500, activation='relu', kernel_initializer = 'glorot_uniform')(x)
 x = Dense(2000, activation='relu', kernel_initializer = 'glorot_uniform')(x)
@@ -103,7 +93,12 @@ decoded = Dense(17, kernel_initializer = 'glorot_uniform')(x)
 
 # autoencoder
 autoencoder = Model(input_df, decoded)
+```
 
+The variable "autoencoder" is the whole neural network shown in the above diagram. However, we want the "bottleneck" layer as our data would be the most compressed.
+
+
+```python
 #encoder - used for our dimention reduction
 encoder = Model(input_df, encoded)
 
@@ -111,15 +106,18 @@ autoencoder.compile(optimizer= 'adam', loss='mean_squared_error')
 
 autoencoder.fit(creditcard_df_scaled, creditcard_df_scaled, batch_size = 128, epochs = 25,  verbose = 1)
 
-#get the compressed data called pred 
+#get the compressed data called pred
 pred = encoder.predict(creditcard_df_scaled)
-
 ```
+After reducing the dimension using the Auto Encoder, the Elbow method was used to find the optimal K value for the new reduced data. The elbow graph is plotted below.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.5elbow.png" alt="elbow after autoencoder">
 
+Then the new elbow graph (post-Autoencoder) was plotted on the same figure with the pre-Autoencoder. As shown below, the "elbow" on the graph is reached earlier for the post-Autoencoder (pink) than the pre-Autoencoder (blue).
+
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/06.7bothelbow.png" alt="2 elbows on one graph">
 
+Thus the K value was determined to be 3, and the K-means clustering was performed. Again, PCA was used to visualize the final clustering outcome.
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project02-Marketing/07pcaAutoencoder.png" alt="post pca after autoencoder">
 [Enlarge Diagram](https://yoonkwon-yi.github.io/images/Project02-Marketing/07pcaAutoencoder.png)
