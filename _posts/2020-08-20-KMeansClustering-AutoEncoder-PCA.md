@@ -126,6 +126,8 @@ Thus the K value was determined to be 3, and the K-means clustering was performe
 
 ## 5. Conclusion
 
+In this project, I utilized Autoencoder and K-means clustering technique to group bank customers to allow targeted marketing. PCA method was used to visualize high dimensional data into 2D space. 
+
 
 
 
