@@ -23,6 +23,28 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/c/rossmann-store-s
 
 ## 3. Explore & Visualize
 
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/correlations.png" alt="post pca scatterplot">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/typeStores.png" alt="post pca scatterplot">
+
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/prediction.png" alt="post pca scatterplot">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/trend1.png" alt="post pca scatterplot">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/day week 1.png" alt="post pca scatterplot">
+
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2predict.png" alt="post pca scatterplot">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2.trend.png" alt="post pca scatterplot">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2holiday.png" alt="post pca scatterplot">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2weekly.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2yearly.png" alt="post pca scatterplot">
 
 ## 4. Train Algorithm
 
