@@ -110,6 +110,22 @@ def sales_prediction(Store_ID, sales_df, holidays, periods):
 ```
 
 
+```python
+def sales_prediction(Store_ID, sales_df, holidays, periods):
+  # Function that takes in the storeID and returns two date/sales columns in Prophet format
+  # Format data to fit prophet
+
+  sales_df = sales_df[ sales_df['Store'] == Store_ID ]
+  sales_df = sales_df[['Date', 'Sales']].rename(columns = {'Date': 'ds', 'Sales':'y'})
+  sales_df = sales_df.sort_values('ds')
+
+  model    = Prophet(holidays = holidays)
+  model.fit(sales_df)
+  future   = model.make_future_dataframe(periods = periods)
+  forecast = model.predict(future)
+  figure   = model.plot(forecast, xlabel='Date', ylabel='Sales')
+  figure2  = model.plot_components(forecast)
+
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2predict.png" alt="sales prediction WITH holidays">
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2trend.png" alt="trend prediction WITH holidays">
@@ -118,7 +134,7 @@ def sales_prediction(Store_ID, sales_df, holidays, periods):
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2weekly.png" alt="week prediction WITH holidays">
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2yearly.png" alt="yearly prediction WITH holidays">
-
+```
 
 
 
