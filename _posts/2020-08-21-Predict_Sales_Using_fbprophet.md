@@ -23,28 +23,30 @@ Data Source: From Kaggle (Click [here](https://www.kaggle.com/c/rossmann-store-s
 
 ## 3. Explore & Visualize
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/correlations.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/correlations.png" alt="post correlations between columns">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/typeStores.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/typeStores.png" alt="type stores ">
 
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/prediction.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/prediction.png" alt="sales prediction without holidays">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/trend1.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/trend1.png" alt="trend prediction without holidays">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/day week 1.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/day week 1.png" alt="week prediction without holidays">
+
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/day year 1.png" alt="year prediction without holidays">
 
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2predict.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2predict.png" alt="sales prediction WITH holidays">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2.trend.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2.trend.png" alt="trend prediction WITH holidays">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2holiday.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2holiday.png" alt="holiday prediction WITH holidays">
 
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2weekly.png" alt="post pca scatterplot">
-<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2yearly.png" alt="post pca scatterplot">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2weekly.png" alt="week prediction WITH holidays">
+<img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2yearly.png" alt="yearly prediction WITH holidays">
 
 ## 4. Train Algorithm
 
