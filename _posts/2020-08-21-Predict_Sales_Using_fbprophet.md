@@ -125,6 +125,7 @@ def sales_prediction(Store_ID, sales_df, holidays, periods):
   forecast = model.predict(future)
   figure   = model.plot(forecast, xlabel='Date', ylabel='Sales')
   figure2  = model.plot_components(forecast)
+```
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2predict.png" alt="sales prediction WITH holidays">
 
@@ -134,7 +135,7 @@ def sales_prediction(Store_ID, sales_df, holidays, periods):
 
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2weekly.png" alt="week prediction WITH holidays">
 <img src="{{site.url}}{{site.baseurl}}/images/Project03-Sales/2yearly.png" alt="yearly prediction WITH holidays">
-```
+
 
 
 
